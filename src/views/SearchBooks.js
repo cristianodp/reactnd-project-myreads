@@ -5,6 +5,8 @@ import * as BooksAPI from "../utils/BooksAPI";
 import BookshelfBooks from "./BookshelfBooks";
 
 class SearchBooks extends React.Component {
+ 
+
   state = {
     booksFounded: [],
     query: ""
@@ -16,16 +18,11 @@ class SearchBooks extends React.Component {
   }
 
   handlerChangeSearchValue = e => {
-    this.setState({ query: e.target.value });
+    const query = e.target.value
+    this.setState({ query });
+    this.findBooksByQuery(query);
   };
-
-  handlerOnPressExecuteSearchBooks = e => {
-    if (e.which === 13 || e.keyCode === 13) {
-      this.findBooksByQuery(this.state.query);
-      return false;
-    }
-  };
-
+  
   isInBookshelf = (booksInShef, book) => {
     for (let shelfBook of booksInShef) {
       if (book.id === shelfBook.id) return shelfBook.shelf;
@@ -75,18 +72,19 @@ class SearchBooks extends React.Component {
               placeholder="Search by title or author"
               value={query}
               onChange={this.handlerChangeSearchValue}
-              onKeyPress={this.handlerOnPressExecuteSearchBooks}
             />
           </div>
         </div>
         <div className="search-books-results">
           {/* <ol className="books-grid" /> */}
-          {booksFounded.length > 0 && (
+          {booksFounded.length > 0 && query !== "" && (
             <BookshelfBooks
               books={booksFounded}
               handlerChangeShelf={(event, book) => {
                 handlerChangeShelf(event, book, () => {
-                  this.findBooksByQuery(this.state.query);
+                  window.location.href = window.location.href.replace('search','')
+                  //this.findBooksByQuery(this.state.query);
+
                 });
               }}
             />
