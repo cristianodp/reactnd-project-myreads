@@ -2,7 +2,7 @@
 
 This project was made as part of the Nanodegree Program at Udacity. The solution allowed to control the reading status of books.
 
-![](https://github.com/cristianodiniz/reactnd-project-myreads/master/imgs/img1.gif)
+![](https://raw.githubusercontent.com/cristianodiniz/reactnd-project-myreads/master/imgs/img1.gif)
 
 [Demo](https://build-zopjphqbyx.now.sh"https://build-zopjphqbyx.now.sh")
 
