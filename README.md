@@ -8,7 +8,7 @@ This project was made as part of the Nanodegree Program at Udacity. The solution
 
 ## Requirements
 - node js instaled
-- npm install
+- npm instaled
 
 ## How install
 * install all project dependencies with `npm install`
