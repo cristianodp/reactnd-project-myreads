@@ -1,6 +1,6 @@
 # My Reads App
 
-This project was made as part of the Nanodegree Program at Udacity. The solution allowed to control the reading status of books.
+This project was made as part of the Nanodegree Program at Udacity. The solution allows creating, comment and vote at posts. 
 
 ![](https://raw.githubusercontent.com/cristianodiniz/reactnd-project-readable/master/imgs/semple_1.gif)
 
